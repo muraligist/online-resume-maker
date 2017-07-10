@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister" rel="stylesheet">
+</head>
+<style>
+.navbar-header > img
+{
+width:200px;
+height:auto;
+padding:10px;
+}
+.navbar
+{
+padding-top:0px;
+}
+.active
+{
+background-color:black;
+}
+.col-sm-3
+{
+padding:20px;
+}
+.well
+{
+box-shadow:5px 5px 15px black;
+}
+footer, .copyright
+{
+background-color:#000000;
+color:white;
+}
+.fa
+{
+padding:10px;
+font-size:16pt;
+}
+.media
+{
+padding:40px 30px 60px 30px;
+}
+.fa-facebook
+{
+color:#3B5998;
+}
+.fa-youtube
+{
+color:red;
+}
+.fa-twitter
+{
+color:#55ACEE;
+}
+.fa-linkedin
+{
+color:#007BB6;
+}
+.fa-circle
+{
+color:red;
+}
+.fa
+{
+color:blue;
+}
+ul
+{
+padding:20px;
+}
+#jumb
+{
+background-color:rgba(128,128,128,0.5);
+color:white;
+padding:80px;
+}
+.previous, .next
+{
+border:1px solid green;
+color:red;
+}
+   
+    .item > h3
+    {
+        padding:100px;
+        background-color:white;
+        text-align: center;
+        color: black;
+        box-shadow: 1px 5px 15px black;
+        margin-bottom: 20px;
+    }
+.f
+{
+font-size:12pt;
+}
+div > #panel1
+{
+background-color:white;
+box-shadow:1px 5px 15px black;
+}
+.col-sm-4 > p
+{
+padding:40px;
+font-size:14pt;
+}
+    .jumbotron > .btn-danger
+    {
+        padding:20px;
+        font-size: 20pt;
+        box-shadow: 5px 5px 15px black;
+        background-color: darkviolet;
+    }
+
+.well-lg
+    {
+        height:300px;
+    }
+    .well > p
+    {
+        justify-content:center;
+        padding:5px;
+    }
+</style>
+<script>
+
+$(document).ready(function()
+{
+$("[data-toggle=popover]").popover({
+    html: true, 
+	content: function() {
+          return $('#popover-content').html();
+        }
+});
+}
+);
+
+</script>
+<script>
+$(document).ready
+(
+function()
+{
+ 	$("#panel1").hide();
+	$("#panel2").hide();
+	$("#panel3").hide();
+    $("#panel4").hide();
+}
+);
+
+</script>
+	<!-- ------------------------------------------ //-->
+<script> 
+$(document).ready(function(){
+    $("#type1_more").click(function()
+	{
+    //$("#panel1").hide();
+	$("#panel2").hide();
+	$("#panel3").hide();
+    $("#panel4").hide();
+     $("#panel1").slideToggle("slow");
+    }
+	);
+});
+</script>
+
+	<!-- ------------------------------------------ //-->
+<script> 
+$(document).ready(function(){
+    $("#type2_more").click(function()
+	{
+    $("#panel1").hide();
+	//$("#panel2").hide();
+	$("#panel3").hide();
+    $("#panel4").hide();
+
+        $("#panel2").slideToggle("slow");
+    });
+});
+</script>
+
+	<!-- ------------------------------------------ //-->
+<script> 
+$(document).ready(function()
+{
+    $("#type3_more").click(function()
+	{
+    $("#panel1").hide();
+	$("#panel2").hide();
+	//$("#panel3").hide();
+    $("#panel4").hide();
+
+        $("#panel3").slideToggle("slow");
+    });
+});
+</script>
+    <script> 
+$(document).ready(function()
+{
+    $("#type4_more").click(function()
+	{
+    $("#panel1").hide();
+	$("#panel2").hide();
+	$("#panel3").hide();
+    //$("#panel4").hide();
+
+        $("#panel4").slideToggle("slow");
+    });
+});
+</script>
+    <script>
+        $(document).ready(function()
+            {
+                 $("#myCarousel").carousel(
+                     {
+                interval: 100;
+            }
+            );
+     
+});
+    </script>
+
+	<!-- ------------------------------------------ //-->
+<body>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <img class="navbar-brand" src="logo.png">
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Resume Making</a></li>
+      <li><a href="#">Online Resume</a></li>
+	        <li><a href="#">Quick Resume</a></li>
+      <li><a href="#">FAQ</a></li>
+	        <li><a href="#">Feed Back</a></li>
+      <li><a href="#">Contact Us</a></li>
+	        <li><a href="#">Helpline</a></li>
+			<i class="fa fa-circle fa-spin fa-5x fa-fw"></i>
+    </ul>
+	<!-- ------------------------------------------ //-->
+	<ul class="list-unstyled">
+    <li><a data-placement="bottom" data-toggle="popover" data-title="Login" data-container="body" type="button" data-html="true" href="#" id="login" class="btn btn-success navbar-btn">Login</a></li>
+    <div id="popover-content" class="hide">
+     <form>
+    <div class="form-group">
+      <label for="email">Username:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox"> Remember me</label>
+    </div>
+    <button type="submit" class="btn btn-danger">Submit</button>
+  </form>
+	  <a href="#" ><h4 class="text-center"> Create Account </h4> </a>
+    </div>
+  </ul>
+  <!-- ------------------------------------------ //-->
+
+	  <h1 style="color:darkviolet; font-family: 'Leckerli One', cursive"> ONLINE RESUME MAKER </h1> 
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <h2 class="text-center bg-default">START A NEW CAREER</h2>
+
+  <div class="row">
+			<div class="col-sm-3">
+							<div class="well well-lg">
+							<h3 class="text-center"> Chronological  </h3>
+							<p>Chronological resumes are the most commonly used format. They list work history in chronological order, starting with your most recent job down to your earliest. </p>
+						   <ul class="pager">
+							<li class="previous"><a href="#" id="type1_more"> More  <span class="caret"></span></a></li>
+						    <li class="next"><a href="#">Templates</a></li>
+							</ul>
+
+														</div>
+	
+			</div>
+			<div class="col-sm-3">
+							<div class="well well-lg">
+							<h3 class="text-center"> Functional   </h3>
+							<p>Unlike chronological resumes, functional resumes focus on your skills and experience first. This type of resume de-emphasizes the dates in which you have worked.</p>
+							 <ul class="pager">
+							<li class="previous"><a href="#" id="type2_more"> More  <span class="caret"></span></a></li>
+						    <li class="next"><a href="#">Templates</a></li>
+							</ul>
+							</div>
+
+		   </div>
+		   <div class="col-sm-3">
+		   					<div class="well well-lg">
+							<h3 class="text-center"> Combination   </h3>
+							<p>Combination resumes let you detail both your skills and experience, while also backing this up with a chronological listing of work history.</p>
+							<ul class="pager">
+							<li class="previous"><a href="#" id="type3_more"> More  <span class="caret"></span></a></li>
+						    <li class="next"><a href="#">Templates</a></li>
+							</ul>
+							</div>
+  
+		  </div>
+       <div class="col-sm-3">
+		   					<div class="well well-lg">
+							<h3 class="text-center"> Targeted   </h3>
+							<p> Targeted resumes are customized in detail to the prospective job you are seeking.Everything from your objective, your qualifications to educational experience mirrors the job requirements.</p>
+							<ul class="pager">
+							<li class="previous"><a href="#" id="type4_more"> More  <span class="caret"></span></a></li>
+						    <li class="next"><a href="#">Templates</a></li>
+							</ul>
+							</div>
+  
+		  </div>
+		   
+
+		   
+</div>    <!--  row  //-->
+
+<div class="well" id="panel1">
+<h2 class="text-center">Chronological Resume</h2>
+<hr>
+<h4>
+<p>As the name suggests, a [reverse] chronological resume presents your work experience information from newest (most relevant) to oldest (least relevant). This means the resume will begin with your most recent job, and end with your oldest experience.
+<br><br>
+This structure allows you to present yourself in terms of your promotions and upward career mobility, and is therefore particularly useful for entry to mid level applicants looking to boost their careers. </p>
+<font size="+2" color="green"> <i> I should use a reverse chronological resume format if ...</i></font> 
+<ul>
+	 <li><i class="fa fa-check"></i>I want to demonstrate a vertical career progression.</li>
+	 <li><i class="fa fa-check"></i>I want to apply to a job in a similar field.</li>
+  	 <li><i class="fa fa-check"></i>I don't have large work experience gaps.</li>
+</ul>
+<font size="+2" color="red"> <i> I shouldn't use a reverse chronological resume format if ...</i></font> 
+<ul>
+<li><i class="fa fa-times"> </i>I have multiple gaps in my employment history.</li>
+<li><i class="fa fa-times"> </i>I am considering working in a new industry.</li>
+<li><i class="fa fa-times"> </i>I frequently change jobs.</li>
+</ul>
+</h4>
+</div>
+<div class="well" id="panel2">
+<h2> Lets get started 2 </h2>
+</div>
+<div class="well" id="panel3">
+<h2> Lets get started 3</h2>
+</div>
+<div class="well" id="panel4">
+<h2> Lets get started 4</h2>
+</div>
+</div>    <!-- Container  //-->
+        <div class="container">
+<h2> How to format a resume ? </h2>
+  <p class="f"> 
+  As you may have seen above, job seekers have three options when it comes to formatting their resume: Chronological, Functional, and Combination. Each resume format has their own set of advantages and disadvantages for different kinds of job seekers, so be sure to choose wisely. Check out the in-depth writing guides below to get every bit of information needed to create the best resume for you.
+      <br><i> Use the chart below to get a quick idea of which resume format will be best for presenting your unique job experience.</i>
+  </p>
+      <!-- -----------------------------------------  table starts --> 
+ <div class="jumbotron">
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th><h4>Entry-Level/Student</h4></th>
+        <th><h4>Mid-Level</h4></th>
+		<th><h4>Executive/Specialist </h4></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><h4>Reverse-Chronological</h4></td>
+        <th><i class="fa fa-check"></i></th>
+        <th><i class="fa fa-check"></i></th>
+		<th><i class="fa fa-check"></i></th>
+      </tr>
+      <tr>
+        <td><h4>Functional</h4></td>
+        <td></td>
+        <td></td>
+		<th><i class="fa fa-check"></i></th>
+      </tr>
+      <tr>
+        <td><h4>Combination</h4></td>
+        <td></td>
+        <th><i class="fa fa-check"></i></th>
+		<th><i class="fa fa-check"></i></th>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+            
+   <!-- -----------------------------------------  table close --> 
+
+
+
+
+
+<h2 class="text-center"> What are the benefits of Uptowork's online resume maker? </h2>
+<div class="container">
+<div class="row">
+						   <div class="col-sm-4">
+							<div class="media">
+											<div class="media-left">
+			    						   <i class="fa fa-star-o"></i>
+				                 		   </div>
+						    <div class="media-body">
+					        <h4 class="media-heading">Cover Letter Builder</h4>
+				           <p>Write a cover letter using the same templates as your resume.</p>
+					        </div>
+                      </div>
+						</div>
+						 <!-- -----------------------------------------  -->
+						<div class="col-sm-4">
+										<div class="media">
+											<div class="media-left">
+			    						      <i class="fa fa-diamond"></i>
+				                 		   </div>
+						    <div class="media-body">
+					        <h4 class="media-heading">Track Your Resume</h4>
+				           <p>Find out if employers are reading and downloading your resumes.</p>
+					        </div>
+                      </div>
+					  </div>
+					   <!-- -----------------------------------------  -->
+						<div class="col-sm-4">
+										<div class="media">
+											<div class="media-left">
+			    						     <i class="fa fa-user-o"></i>
+				                 		   </div>
+						    <div class="media-body">
+					        <h4 class="media-heading">It's Fast and Easy to Use</h4>
+				           <p>Our online resume builder will help you write a perfect resume in minutes.</p>
+					        </div>
+                      </div>
+						</div>
+						 <!-- -----------------------------------------  -->
+</div>   <!-- row -->
+<div class="row">
+  <!-- -----------------------------------------  -->
+						<div class="col-sm-4">
+										<div class="media">
+											<div class="media-left">
+			    						      <i class="fa fa-tv"></i>
+				                 		   </div>
+						    <div class="media-body">
+					        <h4 class="media-heading">20 Best Resume Templates</h4>
+				           <p>Create a modern and professional resume and cover letter.</p>
+					        </div>
+                      </div>
+					 
+						</div>
+						 <!-- -----------------------------------------  -->
+						<div class="col-sm-4">
+										<div class="media">
+											<div class="media-left">
+			    						 <i class="	fa fa-thumbs-o-up"> </i>
+				                 		   </div>
+						    <div class="media-body">
+					        <h4 class="media-heading">Follow Tips From Experts</h4>
+				           <p>Our experts' tips will show you how to write a resume.</p>
+					        </div>
+                      </div>
+						</div>
+						 <!-- -----------------------------------------  -->
+						<div class="col-sm-4">
+										<div class="media">
+											<div class="media-left">
+			    						    <i class="fa fa-sticky-note-o"> </i>
+				                 		   </div>
+						    <div class="media-body">
+					        <h4 class="media-heading">Flexible Text Editor</h4>
+				           <p>You will have access to the best text editor available.</p>
+					        </div>
+                      </div>
+						</div>
+						 <!-- -----------------------------------------  -->
+</div>           <!-- row -->
+</div>
+            <!----------- slide start  -->
+                          <h1 style="color:red">WHY WITH US ?</h1>
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <h3>Each of the following résumé templates will increase your chances of being called for an interview. </h3>
+        
+    </div>
+
+    <div class="item">
+     <h3>Our templates will improve the impact and readability of your job application, while the intuitive process is making the editing a fun and effortless activity.</h3>
+    </div>
+
+    <div class="item">
+        <h3>Furthermore, they are designed in such a way that gives them the perfect blend of the characteristics of a standard résumé and those of a creative one.</h3>
+    </div>
+  </div>
+
+</div>
+                     <!----------- slide end  -->
+<div class="container">
+   <div class="row">
+				<div class="col-sm-6" style="margin-top:20px"> 
+				<img src="1.jpg" style="box-shadow:5px 5px 15px black" width="550" height="350" border="0" alt="">
+				</div>
+				<div class="col-sm-6"> 
+				 <h2> Professional Resume Templates</h2>
+				 <p style="margin-left:50px;margin-top:20px; font-size:14pt"> Choose professional, elegant, creative, or modern resume templates. Uptowork's resume maker offers 20 templates in 400 colors. You can easily adapt the designs to any resume format you choose: functional, reverse-chronological, or combination. </p>
+				</div>
+</div>
+<br><br><br><br><br>
+<div class="row">
+				<div class="col-sm-6"> 
+				 <h2> Tips From Recruiters</h2>
+				 <p style="margin-left:50px;margin-top:20px; font-size:14pt"> You no longer have to worry about how to make a resume. Our resume generator will guide you through the process of writing each section, step-by-step. Resume writing tips will help you get more job offers. </p>
+				</div>
+				<div class="col-sm-6"> 
+				<img src="steps.jpg" style="box-shadow:5px 5px 15px black" width="550" height="350" border="0" alt="">
+				</div>
+</div>
+            </div>
+
+            <div class="jumbotron" style="margin-top:30px;margin-bottom:30px; text-align:center">
+               <h2>Lets Start to make a resume ! Its Free </h2>
+               <a href="#" class="btn btn-danger btn-lg">Build My Resume Now </a> 
+            </div>
+<!------------------------------------------------footer start from here-->
+<footer style="margin-top:30px;margin-bottom:30px">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-6 footerleft ">
+        <div class="logofooter"> Logo</div>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
+        <p><i class="fa fa-map-pin"></i> 210, Aggarwal Tower, Rohini sec 9, New Delhi -110085, INDIA</p>
+        <p><i class="fa fa-phone"></i> Phone (India) : +91 9999 878 398</p>
+        <p><i class="fa fa-envelope"></i> E-mail : info@webenlance.com</p>
+        
+      </div>
+      <div class="col-md-2 col-sm-6 paddingtop-bottom">
+        <h6 class="heading7">GENERAL LINKS</h6>
+        <ul class="footer-ul">
+          <li><a href="#"> Career</a></li>
+          <li><a href="#"> Privacy Policy</a></li>
+          <li><a href="#"> Terms and Conditions</a></li>
+          <li><a href="#"> Client Gateway</a></li>
+          <li><a href="#"> Ranking</a></li>
+          <li><a href="#"> Case Studies</a></li>
+          <li><a href="#"> Frequently Ask Questions</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3 col-sm-6 paddingtop-bottom">
+        <h6 class="heading7">LATEST POST</h6>
+        <div class="post">
+          <p>facebook crack the movie advertisment code:what it means for you <span>August 3,2015</span></p>
+          <p>facebook crack the movie advertisment code:what it means for you <span>August 3,2015</span></p>
+          <p>facebook crack the movie advertisment code:what it means for you <span>August 3,2015</span></p>
+        </div>
+      </div>
+						<div class="col-md-3 col-sm-6 paddingtop-bottom">
+                       <a class="fa fa-facebook"> </a>
+					   <a class="fa fa-twitter"> </a>
+					   <a class="fa fa-youtube"> </a>
+					   <a class="fa fa-linkedin"> </a>
+            
+						</div>
+     
+    
+
+<div class="copyright">
+     <div class="col-md-6">
+      <p>2017 - All Rights with Webenlance</p>
+    </div>
+    <div class="col-md-6">
+      <ul class="bottom_ul">
+
+      </ul>
+    </div>
+    </div>
+  </div>
+        </div>
+      </footer>
+</body>
+</html>
